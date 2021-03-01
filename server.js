@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 const app = express();
 const port = 5000;
 
+// DB connection
 mongoose.connect(config.db.url, 
 { 
 	useCreateIndex: true, 
@@ -16,6 +17,7 @@ mongoose.connect(config.db.url,
 }).then(()=> console.log('DB connected successfully.')
 ).catch(err => console.log('DB connection failed ' + err)
 );
+
 // This will allow all the routes to be accessed anywhere on the web
 //app.use(cors())
 
@@ -25,8 +27,6 @@ const corsOptionsDelegate = (req, callback) => {
     let corsOptions;
 
     let isDomainAllowed = allowlist.indexOf(req.header('Origin')) !== -1;
-    //let isExtensionAllowed = req.path.endsWith('.jpg');
-
     if (isDomainAllowed) {
         // Enable CORS for this request
         corsOptions = { origin: true }
