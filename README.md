@@ -12,3 +12,9 @@ Run Dockerfile:
 2. Run command : docker run -d -p 8080:5000 --name my_docker nodejs-api-tutorial:latest
 
 Access URL : http://localhost:8080/api/products
+
+Run docker-compose:
+--------------------------------------------
+1. Run command : docker-compose up --build
+
+Access URL : http://localhost/api/products
