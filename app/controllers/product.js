@@ -49,7 +49,6 @@ const products = {
                 message: err.message || "Error occurred while creating the Product."
             });
         })
-
     },
     // PUT update Product by id
     updateProduct: function(req, res) {
@@ -78,7 +77,6 @@ const products = {
                     message: "Error occured while updating Product with id=" + id
                 });
             });
-
     },
     // DELETE delete Product by id
     deleteProduct: function(req, res) {

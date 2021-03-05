@@ -4,7 +4,7 @@
   "description": "CRUD Restful API with Node.js, Express and MongoDB using Docker",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "NODE_ENV=dev node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
